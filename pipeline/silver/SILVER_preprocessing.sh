@@ -23,7 +23,7 @@ do
 	echo "#!/bin/bash" > $filename
 	echo "#PBS -N download_${umi}" >> $filename
 	echo "#PBS -m ae" >> $filename
-	echo "#PBS -l nodes=1:ppn=10,walltime=2:00:00,vmem=10gb" >> $filename
+	echo "#PBS -l nodes=1:ppn=3,walltime=2:00:00,vmem=10gb" >> $filename
 	echo "" >> $filename
 
 	echo "cd $orig_DIR" >> $filename
