@@ -75,7 +75,6 @@ do
 #Star parameters will keep the positions of aligments with best score (AllBestScore) up to 10 (outSAMmultNmax 10)
 
 	echo "gzip *.fastq" >> $filename
-	echo "echo \"STAR OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "cd $DIR" >>$filename
@@ -96,7 +95,6 @@ do
 	echo "" >> $filename
 
 	echo "samtools sort -o Aligned.sortedByName.picard.dedup.bam -n Aligned.sortedByCoord.picard.dedup.bam" >> $filename
-	echo "echo \"sorting by name OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "# RSeQC: to retrieve % correct strandedness" >> $filename
@@ -116,7 +114,6 @@ do
 	echo "# Count the number of lines per fastq to calculate the number of reads, should be the same for both ends" >> $filename
    	echo "wc -l ${i}_trimmed_dedup_R1.fastq > total_seq_reads_dedup_R1.txt" >> $filename
    	echo "wc -l ${i}_trimmed_dedup_R2.fastq > total_seq_reads_dedup_R2.txt" >> $filename
-	echo "echo \"conversion of bam to fastq OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "# FastQC for each sample (subsampled and duplicates removed), can be combined with multiQC later on locally" >> $filename
