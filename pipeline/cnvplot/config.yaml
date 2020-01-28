@@ -1,0 +1,13 @@
+humangenome: "/data/gent/vo/000/gvo00027/RNA_seq_pipeline/resources_Ruben/GRCh38-noaltBisulfite/GRCh38.fa"
+library: 'NIPT_sWGS'
+scriptfolder: '/data/gent/vo/000/gvo00027/vsc42220/scripts'
+PoNichorCNA: "/data/gent/vo/000/gvo00027/vsc42220/sWGS_pediatric_cancer/ichor.PoN.50.500kb_median.rds"
+ichorCNAfolder: "/user/gent/422/vsc42220/ichorCNA"
+runichorCNA: "/user/gent/422/vsc42220/ichorCNA/scripts/runIchorCNA.R"
+hmmcopy: "/data/gent/vo/000/gvo00027/vsc42220/ichorCNA/HMMcopy/bin/readCounter"
+wisex: "/user/gent/422/vsc42220/.local/lib/python3.6/site-packages/wisecondorX/main.py"
+wisexref: "/scratch/gent/vo/000/gvo00027/fastqs_ruben/SILVER.GRCh38.200kbp.noNIPT.npz"
+blacklist: "/data/gent/vo/000/gvo00027/RNA_seq_pipeline/resources_Ruben/wisecondorX_master/WisecondorX/example.blacklist/centromere.hg38.txt"
+wisexkb: 200
+ichorkb: 500
+
