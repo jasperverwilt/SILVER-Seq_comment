@@ -73,7 +73,6 @@ do
 #Star parameters will keep the positions of aligments with best score (AllBestScore) up to 10 (outSAMmultNmax 10)
 
 	echo "gzip *.fastq" >> $filename
-	echo "echo \"STAR OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "module purge" >> $filename
@@ -90,7 +89,6 @@ do
 	echo "module purge" >> $filename
 	echo "ml UMI-tools/1.0.0-intel-2018b-Python-3.6.6" >> $filename
 	echo "umi_tools dedup -I $DIR/${i}_srout/Aligned.sortedByCoord.out.sorted.bam --output-stats=deduplicated -S Aligned.sortedByCoord.umi.dedup.bam" >> $filename
-	echo "echo \"duplicate removal OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "# Sort by name, because bamtofastq need name sorted bam" >> $filename
@@ -99,7 +97,6 @@ do
 	echo "" >> $filename
 
 	echo "samtools sort -o Aligned.sortedByName.umi.dedup.bam -n Aligned.sortedByCoord.umi.dedup.bam" >> $filename
-	echo "echo \"sorting by name OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "# RSeQC: to retrieve % correct strandedness and the splice reads" >> $filename
@@ -118,7 +115,6 @@ do
 	echo "bedtools bamtofastq -i Aligned.sortedByName.umi.dedup.bam -fq ${i}_dedup.fastq #bam needs to be sorted by name so that pairs are together" >> $filename
 	echo "# Count the number of lines per fastq to calculate the number of reads, should be the same for both ends" >> $filename
    	echo "wc -l ${i}_dedup.fastq > total_seq_reads_dedup.txt" >> $filename
-	echo "echo \"conversion of bam to fastq OK\"" >> $filename
 	echo "" >> $filename
 
 	echo "# FastQC for each sample, can be combined with multiQC later on locally" >> $filename
