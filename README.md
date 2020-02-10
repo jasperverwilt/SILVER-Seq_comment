@@ -15,6 +15,7 @@ Raw data was downloaded from the NCBI SRA database (SRA Study SRP198979) and all
 Smith, T., Heger, A., & Sudbery, I. (2017). 
 UMI-tools: modeling sequencing errors in Unique Molecular Identifiers to improve quantification accuracy. 
 Genome research, 27(3), 491-499.
+
 <a id="2">[2]</a> 
 Martin, M. (2011).
 Cutadapt removes adapter sequences from high-throughput sequencing reads.
